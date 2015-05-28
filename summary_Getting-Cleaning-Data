@@ -1,7 +1,7 @@
 Getting and Cleaning Data summary
 
 1-) Manipulating Data with dplyr
-    - Main functions:
+    - main functions:
         select()
         filter()
         arrange()
@@ -9,7 +9,7 @@ Getting and Cleaning Data summary
         summarize()
 
 2-) Grouping and Chaining with dplyr
-    - Secondary functions:
+    - secondary functions:
         group_by()
         n()
         n_distinct()
@@ -24,7 +24,7 @@ Getting and Cleaning Data summary
     
       
 3-) Tidying Data with tidyr
-    - tidyr functions:
+    - tidyr main functions:
         gather()
         separate()
         spread()
@@ -44,5 +44,18 @@ Getting and Cleaning Data summary
               print
 
 4-) Dates and Times with lubridate
-
-C:\Users\Tiago\Documents\R\win-library\3.2\swirl\user_data\Tiago
+    - lubridate main functions:
+        today()
+        wday()
+        now(tzone)
+        ymd(), hms(), etc
+        update()
+        days(), hours(), minutes(), etc
+        with_tz()
+        new_interval()
+        as.period()
+    - time-related objects:
+        instants
+        intervals
+        durations
+        periods
