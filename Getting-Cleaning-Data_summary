@@ -14,7 +14,14 @@ Getting and Cleaning Data summary
         n()
         n_distinct()
         mean()
-    - chaining operator: %>%
+    - chaining operator: %>% (it would be read as "then")
+        EX.:
+            cran %>%
+              select(ip_id, country, package, size) %>%
+              mutate(size_mb = size / 2^20) %>%
+              filter(size_mb <= 0.5) %>%
+              arrange(desc(size_mb))
+    
       
 3-) Tidying Data with tidyr
     - tidyr functions:
@@ -25,5 +32,15 @@ Getting and Cleaning Data summary
         mutate(extract_numeric())
         select () unique
         bind_rows()
+        
+        EX.:
+            sat %>%
+              select(-contains("total")) %>%
+              gather(part_sex, count, -score_range) %>%
+              separate(part_sex, c("part", "sex")) %>%
+              group_by(part, sex) %>%
+              mutate(total = sum(count),
+                     prop = count / total) %>%
+              print
 
 4-) Dates and Times with lubridate
